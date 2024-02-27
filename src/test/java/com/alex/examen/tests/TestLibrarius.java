@@ -11,12 +11,14 @@ import org.testng.annotations.Test;
 public class TestLibrarius {
     private WebDriver driver;
 
-    static final String USER_EMAIL = "melnica456@gmail.com";
+    //Your username
+    static final String USER_EMAIL = "Username";
     String actualEmailProfile;
     public final String EXPECTED_FONT_TOP_MENU= "15px";
 
     public final String EXPECTED_FONT_CARD= "16px";
-    static final String USER_PASS = "TrefUiok0102";
+    //Your password
+    static final String USER_PASS = "password";
 
     @BeforeTest
     public void setProperties(){
@@ -52,6 +54,7 @@ public class TestLibrarius {
         Assert.assertEquals(fontSizeOfCardTitle,EXPECTED_FONT_CARD);
         Assert.assertEquals(fontSizeOfCardPrice,EXPECTED_FONT_CARD);
 
+        
 
     }
 
