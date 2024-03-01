@@ -15,7 +15,7 @@ public class BasicTest {
 
     @BeforeTest
     public void setProperties(){
-        driver = WebDriverManager.chromedriver().create();
+        driver = WebDriverManager.firefoxdriver().create();
         driver.manage().window().maximize();
     }
 

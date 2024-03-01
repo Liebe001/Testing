@@ -34,9 +34,8 @@ public class TestLoginLibrarius extends BasicTest{
         String expectedEmailProfile = "Bine ați venit! %s".formatted(USER_EMAIL);
         Assert.assertEquals(actualEmailProfile,expectedEmailProfile);
 
-
-
     }
+
 //    @Test
 //    public void cssRequirementsTest(){
 //        driver.get("https://librarius.md/ro/");
