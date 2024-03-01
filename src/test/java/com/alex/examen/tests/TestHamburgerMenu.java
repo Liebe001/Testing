@@ -13,7 +13,7 @@ public class TestHamburgerMenu extends BasicTest{
 
     @Test(testName = "hamburgerMenuTest")
     public void testHamburgerMenu(){
-        LoginLibrarius loginLibrarius = login();
+        login();
         HamburgerMenuLibrarius hamburgerMenuLibrarius= new HamburgerMenuLibrarius(driver);
         hamburgerMenuLibrarius.clickOnSideBar();
         List<String> booksListType = hamburgerMenuLibrarius.getBookTypeList();

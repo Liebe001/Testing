@@ -1,13 +1,12 @@
 package com.alex.examen.tests;
 
 
-import com.alex.examen.librarius.LibrariusCss;
+
 import com.alex.examen.librarius.LoginLibrarius;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
+
+
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.Test;
 
 
