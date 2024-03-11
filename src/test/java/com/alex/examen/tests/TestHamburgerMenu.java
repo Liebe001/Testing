@@ -8,9 +8,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class TestHamburgerMenu extends BasicTest{
-
     public final int NUMBER_OF_BOOKS_FROM_TYPE= 11;
-
     @Test(testName = "hamburgerMenuTest")
     public void testHamburgerMenu(){
         login();

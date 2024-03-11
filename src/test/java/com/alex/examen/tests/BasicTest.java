@@ -1,6 +1,7 @@
 package com.alex.examen.tests;
 
 import com.alex.examen.librarius.LoginLibrarius;
+import com.alex.examen.utils.ConfigProperties;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -9,18 +10,20 @@ import org.testng.annotations.BeforeTest;
 public class BasicTest {
     WebDriver driver;
 
-    static final String USER_EMAIL = "melnica456@gmail.com";
+    String USER_EMAIL;
 
-    static final String USER_PASS = "TrefUiok0102";
+    String USER_PASS ;
 
     @BeforeTest
     public void setProperties(){
         driver = WebDriverManager.firefoxdriver().create();
         driver.manage().window().maximize();
+        USER_EMAIL = ConfigProperties.getProperty("user.email");
+        USER_PASS = ConfigProperties.getProperty("user.password");
     }
 
     public LoginLibrarius login(){
-        driver.get("https://librarius.md/ro/login");
+        driver.get(ConfigProperties.getProperty("loginpage"));
         LoginLibrarius loginLibrarius = new LoginLibrarius(driver);
         // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         loginLibrarius.setUserEmailElem(USER_EMAIL);

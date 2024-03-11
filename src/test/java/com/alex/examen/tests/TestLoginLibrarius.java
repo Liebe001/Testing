@@ -13,15 +13,9 @@ import org.testng.annotations.Test;
 
 public class TestLoginLibrarius extends BasicTest{
 
-    //Your username
+
 
     String actualEmailProfile;
-    public final String EXPECTED_FONT_TOP_MENU= "15px";
-
-    public final String EXPECTED_FONT_CARD= "16px";
-    //Your password
-
-
 
 
 
@@ -35,22 +29,6 @@ public class TestLoginLibrarius extends BasicTest{
 
     }
 
-//    @Test
-//    public void cssRequirementsTest(){
-//        driver.get("https://librarius.md/ro/");
-//        LibrariusCss librariusCss = new LibrariusCss(driver);
-//        String actualResultFontTopMenu =  librariusCss.getSizeOfTopMenu();
-//
-//
-//        String fontSizeOfCardTitle = librariusCss.getSizeOfCardTitle();
-//        String fontSizeOfCardPrice = librariusCss.getSizeOfCardPrice();
-//        Assert.assertEquals(actualResultFontTopMenu,EXPECTED_FONT_TOP_MENU);
-//        Assert.assertEquals(fontSizeOfCardTitle,EXPECTED_FONT_CARD);
-//        Assert.assertEquals(fontSizeOfCardPrice,EXPECTED_FONT_CARD);
-//
-//
-//
-//    }
 
 
 

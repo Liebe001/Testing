@@ -3,7 +3,9 @@ package com.alex.examen.librarius;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
@@ -25,10 +27,13 @@ public class LoginLibrarius {
     WebElement basketImg;
 
     WebDriver driver;
+    Wait<WebDriver> wait ;
 
     public LoginLibrarius(WebDriver driver){
         this.driver = driver;
         getInitialWebElement();
+        final int TIMEOUT = 5;
+        wait =  new WebDriverWait(driver,Duration.ofSeconds(TIMEOUT));
     }
 
     public void getInitialWebElement(){
@@ -50,17 +55,16 @@ public class LoginLibrarius {
         submitButton.click();
     }
     public void clickBasket(){
-        WebElement basketDiv = driver.findElement(new By.ByClassName("show-basket"));
-
-        basketImg = basketDiv.findElement(new By.ByTagName("img"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("show-basket")));
+        WebElement basketDiv = driver.findElement(By.className("show-basket"));
+        basketImg = basketDiv.findElement(By.tagName("img"));
         basketImg.click();
     }
 
-    public String getEmailProfile() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
-       // Thread.sleep(2000);
+    public String getEmailProfile() {
         clickBasket();
-        emailProfile = driver.findElement(new By.ByXPath("//*[@class = 'sl-username-link']"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class = 'sl-username-link']")));
+        emailProfile = driver.findElement(By.xpath("//*[@class = 'sl-username-link']"));
         return emailProfile.getText();
     }
 
