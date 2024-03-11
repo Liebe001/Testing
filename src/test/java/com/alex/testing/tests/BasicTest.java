@@ -1,19 +1,22 @@
-package com.alex.examen.tests;
+package com.alex.testing.tests;
 
-import com.alex.examen.librarius.LoginLibrarius;
-import com.alex.examen.utils.ConfigProperties;
+import com.alex.testing.librarius.LoginLibrarius;
+import com.alex.testing.utils.ConfigProperties;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 
 public class BasicTest {
     WebDriver driver;
     String USER_EMAIL;
-
     String USER_PASS ;
-    @BeforeTest
+    static Logger logger = Logger.getLogger(BasicTest.class);
+
+    @BeforeClass(alwaysRun = true)
     public void setProperties(){
+        logger.info("Initialize test");
         driver = WebDriverManager.firefoxdriver().create();
         driver.manage().window().maximize();
         USER_EMAIL = ConfigProperties.getProperty("user.email");
@@ -27,12 +30,12 @@ public class BasicTest {
         loginLibrarius.setUserEmailElem(USER_EMAIL);
         loginLibrarius.setUserPasswordElem(USER_PASS);
         loginLibrarius.clickSubmitButton();
-
         return loginLibrarius;
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void destroy(){
+        logger.info("Close test");
         driver.quit();
     }
 }

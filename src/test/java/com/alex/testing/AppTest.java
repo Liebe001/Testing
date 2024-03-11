@@ -1,4 +1,4 @@
-package com.alex.examen;
+package com.alex.testing;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

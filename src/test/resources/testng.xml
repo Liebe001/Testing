@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite">
+    <test name="Test Basics 1">
+        <groups>
+            <run>
+                <include name="login"/>
+                <include name="basicUI"/>
+<!--                <include name="hamburgerMenuTest"/>-->
+            </run>
+            <dependencies>
+                <group name="basicUI" depends-on="login"/>
+            </dependencies>
+        </groups>
+        <packages>
+            <package name="com.alex.testing.tests"/>
+        </packages>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
