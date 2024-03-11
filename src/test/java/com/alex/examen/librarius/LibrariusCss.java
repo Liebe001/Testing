@@ -3,15 +3,13 @@ package com.alex.examen.librarius;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+
 
 public class LibrariusCss {
-    private WebDriver driver;
+    private final WebDriver driver;
     private WebElement topMenu;
     private WebElement cardTitle;
     private WebElement cardPrice;
-
-    private String sizeOfTopMenu;
 
     public LibrariusCss(WebDriver driver){
         this.driver = driver;
@@ -23,8 +21,7 @@ public class LibrariusCss {
         cardPrice = driver.findElement(By.className("card-price"));
     }
     public String getSizeOfTopMenu(){
-        sizeOfTopMenu = topMenu.findElement(By.tagName("a")).getCssValue("font-size");
-        return sizeOfTopMenu;
+        return topMenu.findElement(By.tagName("a")).getCssValue("font-size");
     }
 
     public String getSizeOfCardTitle(){

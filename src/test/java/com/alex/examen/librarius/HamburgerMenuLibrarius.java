@@ -15,11 +15,6 @@ public class HamburgerMenuLibrarius {
     @FindBy(xpath = "//*[@class = 'sb-category-tree']/div/a")
     private List<WebElement> booksTypeListElem;
 
-    @FindBy(xpath = "//*[@id='sb-subcategory-box-content']/div")
-    private List<WebElement> belletristicAllSubItems;
-
-    @FindBy(xpath = "//*[@class='close-sidenav-sub']")
-    private WebElement closeSubItems;
 
     public HamburgerMenuLibrarius(WebDriver driver){
         this.driver = driver;
@@ -29,15 +24,9 @@ public class HamburgerMenuLibrarius {
         sideBarElem.click();
     }
 
-    public void closeSutItems(){
-        closeSubItems.click();
-    }
+
     public List<String> getBookTypeList(){
         return booksTypeListElem.stream().map(WebElement::getText).toList();
-    }
-
-    public void setAllBooksType()  {
-
     }
 
 }
