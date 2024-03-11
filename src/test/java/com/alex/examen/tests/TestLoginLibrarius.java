@@ -12,13 +12,7 @@ import org.testng.annotations.Test;
 
 
 public class TestLoginLibrarius extends BasicTest{
-
-
-
     String actualEmailProfile;
-
-
-
     @Test
     public void loginTest() {
         driver.get("https://librarius.md/ro/login");

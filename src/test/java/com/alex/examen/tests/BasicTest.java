@@ -9,11 +9,9 @@ import org.testng.annotations.BeforeTest;
 
 public class BasicTest {
     WebDriver driver;
-
     String USER_EMAIL;
 
     String USER_PASS ;
-
     @BeforeTest
     public void setProperties(){
         driver = WebDriverManager.firefoxdriver().create();
@@ -32,7 +30,6 @@ public class BasicTest {
 
         return loginLibrarius;
     }
-
 
     @AfterClass
     public void destroy(){

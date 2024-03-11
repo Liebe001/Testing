@@ -9,10 +9,8 @@ import java.util.List;
 
 public class HamburgerMenuLibrarius {
     WebDriver driver;
-
     @FindBy(xpath = "//*[@class = 'showsidebar']")
     private WebElement sideBarElem;
-
     //*[@class='sb-category-item ']/a[@class='sb-show-subcategory']
     @FindBy(xpath = "//*[@class = 'sb-category-tree']/div/a")
     private List<WebElement> booksTypeListElem;
@@ -23,14 +21,10 @@ public class HamburgerMenuLibrarius {
     @FindBy(xpath = "//*[@class='close-sidenav-sub']")
     private WebElement closeSubItems;
 
-
-
-
     public HamburgerMenuLibrarius(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
-
     public void clickOnSideBar(){
         sideBarElem.click();
     }

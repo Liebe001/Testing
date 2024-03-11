@@ -15,5 +15,4 @@ public class TestSearchBox extends BasicTest{
         searchBox.showBooks();
         Assert.assertEquals(searchBox.getNumberOfBooks(),36);
     }
-
 }

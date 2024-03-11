@@ -14,19 +14,12 @@ import java.time.Duration;
 import java.util.List;
 
 public class SearchBox {
-
-
     private final WebDriver driver;
-
     @FindBy(xpath = "//*[@id='searchbox']")
     private WebElement searchBoxElem;
-
    // @FindBy(xpath = "//*[@class= 'product-info'][position()<=5]")
     private List<WebElement> books;
-
     Wait<WebDriver> wait;
-
-
     public SearchBox(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(this.driver,this);

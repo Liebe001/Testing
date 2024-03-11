@@ -16,7 +16,6 @@ public class TestHamburgerMenu extends BasicTest{
         hamburgerMenuLibrarius.clickOnSideBar();
         List<String> booksListType = hamburgerMenuLibrarius.getBookTypeList();
         Assert.assertEquals(booksListType.size(),NUMBER_OF_BOOKS_FROM_TYPE);
-
     }
 
 

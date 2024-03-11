@@ -8,7 +8,6 @@ import java.util.Properties;
 public class ConfigProperties {
     protected static FileInputStream fileInputStream;
     protected static Properties PROPERTIES;
-
     static{
         try{
             fileInputStream = new FileInputStream("src/test/resources/config.properties");

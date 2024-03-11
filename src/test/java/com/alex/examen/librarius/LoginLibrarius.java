@@ -11,8 +11,6 @@ import java.time.Duration;
 
 public class LoginLibrarius {
 
-
-
    // @FindBy(id = "email")
    WebElement userEmailElem;
    // @FindBy(xpath = "//*[@id='password']")
