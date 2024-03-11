@@ -8,7 +8,7 @@ public class TestSearchBox extends BasicTest{
 
 
     @Test(testName = "searchBoxTest")
-    public void searchBox() throws InterruptedException {
+    public void searchBox()  {
         login();
         SearchBox searchBox = new SearchBox(driver);
         searchBox.setSearchBox("Edgar Allan Poe");

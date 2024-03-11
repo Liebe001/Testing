@@ -20,7 +20,7 @@ public class TestLoginLibrarius extends BasicTest{
 
 
     @Test
-    public void loginTest() throws InterruptedException {
+    public void loginTest() {
         driver.get("https://librarius.md/ro/login");
         LoginLibrarius loginLibrarius = login();
         actualEmailProfile = loginLibrarius.getEmailProfile();
